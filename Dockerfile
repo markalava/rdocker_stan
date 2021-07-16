@@ -15,8 +15,11 @@ RUN apt-get update \
   make pandoc \
   #--- V8
   # requires libv8-dev to install from source but using pre-compiled binaries so skip this \
+  # libv8-dev
   #--- loo
   pandoc pandoc-citeproc \
+  #--- DemoTools
+  libv8-dev
   #
   #--- OTHER UTILS -------------------------------------------------------------
   sudo \
