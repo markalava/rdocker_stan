@@ -13,6 +13,10 @@ RUN apt-get update \
   make \
   #--- rstan, rstantools
   make pandoc \
+  #--- V8
+  libv8-dev \
+  #--- loo
+  pandoc pandoc-citeproc \
   #
   #--- OTHER UTILS ------------------------------------------------------------- 
   nano \
