@@ -14,7 +14,7 @@ RUN apt-get update \
   #--- rstan, rstantools
   make pandoc \
   #--- V8
-  libv8-dev \
+  # requires libv8-dev to install from source but using pre-compiled binaries so skip this \
   #--- loo
   pandoc pandoc-citeproc \
   #
