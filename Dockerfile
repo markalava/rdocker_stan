@@ -19,7 +19,7 @@ RUN apt-get update && \
   #
   #--- R SETUP------------------------------------------------------------------
   #--- Package repository: RStudio 'frozen' CRAN package, binaries for Ubuntu 'focal'
-  #echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/__linux__/focal/2021-07-15"))' >> /opt/R/${R_VERSION}/lib/R/etc/Rprofile.site
+  echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/__linux__/focal/2021-07-15"))' >> /opt/R/${R_VERSION}/lib/R/etc/Rprofile.site
   #Rscript -e 'install.packages(c("dplyr", "tibble", "tidyr", "plyr", "stringr", "testthat", "ggplot2", "scales", "Rcpp", "RcppParallel", "BH", "RcppEigen", "pbapply", "gridExtra", "egg"))'
 
 CMD ["R"]
