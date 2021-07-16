@@ -2,6 +2,8 @@ ARG R_VERSION=4.1.0
 
 FROM rstudio/r-base:${R_VERSION}-focal
 
+#ARG R_VERSION
+
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   apt-utils \
@@ -21,7 +23,7 @@ RUN apt-get update \
   #
   #--- R SETUP------------------------------------------------------------------
   #--- Package repository: RStudio 'frozen' CRAN package, binaries for Ubuntu 'focal'
-  && echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/__linux__/focal/2021-07-15"))' >> /opt/R/4.1.0/lib/R/etc/Rprofile.site
+  && echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/__linux__/focal/2021-07-15"))' >> /opt/R/${R_VERSION}/lib/R/etc/Rprofile.site
   #--- R Packages
   # Rscript -e 'install.packages(c("dplyr", "tibble", "tidyr", "plyr", "stringr", "testthat", "ggplot2", "scales", "Rcpp", "RcppParallel", "BH", "RcppEigen", "pbapply", "gridExtra", "egg", "remotes", "ungroup", "rgl", "RCurl", "data.table"))' && \
   # Rscript -e 'remotes::install_github("timriffe/DemoToolsData")' && \
