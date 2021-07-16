@@ -33,10 +33,10 @@ RUN apt-get update \
   #--- Package repository: RStudio 'frozen' CRAN package, binaries for Ubuntu 'focal'
   && echo 'options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/__linux__/focal/2021-07-15"))' >> /opt/R/${R_VERSION}/lib/R/etc/Rprofile.site \
   #--- R Packages (alphabetical!)
-  && Rscript -e 'install.packages(c("BH", "data.table", "demogR", "devtools", "dplyr", "egg", "ggplot2", "gridExtra", "pbapply", "plyr", "Rcpp", "RcppEigen", "RcppParallel", "RCurl", "rgl", "remotes", "rstan", "rstantools", "scales", "stringr", "testthat", "tibble", "tidyr", "ungroup", "usethis", "V8"))' \
+  # && Rscript -e 'install.packages(c("BH", "data.table", "demogR", "devtools", "dplyr", "egg", "ggplot2", "gridExtra", "pbapply", "plyr", "Rcpp", "RcppEigen", "RcppParallel", "RCurl", "rgl", "remotes", "rstan", "rstantools", "scales", "stringr", "testthat", "tibble", "tidyr", "ungroup", "usethis", "V8"))' \
   && Rscript -e 'remotes::install_github("timriffe/DemoToolsData")' \
   && Rscript -e 'remotes::install_github("josehcms/fertestr")'  \
   && Rscript -e 'remotes::install_github("timriffe/DemoTools")'  \
-  && Rscript -e 'remotes::install_github("cimentadaj/DDSQLtools")' 
+  && Rscript -e 'remotes::install_github("cimentadaj/DDSQLtools")'
 
 CMD ["R"]
