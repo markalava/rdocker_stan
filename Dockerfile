@@ -2,7 +2,7 @@ ARG R_VERSION=4.1.0
 
 FROM rstudio/r-base:${R_VERSION}-focal
 
-#ARG R_VERSION
+ARG R_VERSION
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
