@@ -19,7 +19,7 @@ RUN apt-get update \
   #--- loo
   pandoc pandoc-citeproc \
   #--- DemoTools
-  libv8-dev
+  libv8-dev \
   #
   #--- OTHER UTILS -------------------------------------------------------------
   sudo \
