@@ -35,8 +35,8 @@ RUN apt-get update \
   #--- R Packages (alphabetical!)
   # && Rscript -e 'install.packages(c("BH", "data.table", "demogR", "devtools", "dplyr", "egg", "ggplot2", "gridExtra", "pbapply", "plyr", "Rcpp", "RcppEigen", "RcppParallel", "RCurl", "rgl", "remotes", "rstan", "rstantools", "scales", "stringr", "testthat", "tibble", "tidyr", "ungroup", "usethis", "V8"))' \
   && Rscript -e 'install.packages("remotes")' \
-  && Rscript -e 'remotes::install_github("timriffe/DemoToolsData")' \
-  && Rscript -e 'remotes::install_github("josehcms/fertestr")'  \
+  # && Rscript -e 'remotes::install_github("timriffe/DemoToolsData")' \
+  # && Rscript -e 'remotes::install_github("josehcms/fertestr")'  \
   && Rscript -e 'remotes::install_github("timriffe/DemoTools")'  \
   && Rscript -e 'remotes::install_github("cimentadaj/DDSQLtools")'
 
